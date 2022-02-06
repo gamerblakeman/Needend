@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The boys</title>
+<link rel="stylesheet" href="CSS\styles.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="nav">
+      <img src="Images\20211113_212238.jpg" style="width:350px;">
+      <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="info.html">Information</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="gallery.html">Gallery</a></li>
+</ul>
+    </div>
+
+    <div class="main">
+      <h1>This man.</h1>
+      <p>He will have Europe in a chokehold.<br><br>  run</p>
+
+      <form action="#" id="ContactForm">
+        <label for="fullname">Name:</label><br>
+        <input type="text" id="fullname" name="fullname"><br>
+
+        <label for="age">Age:</label><br>
+        <input type="text" id="age" name="age"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br><br>
+
+      </form>
+
+      <button onclick="validate()">Try it</button>
+      <p id="output"></p>
+
+      <script>
+
+      function validate(){
+        var full_name = document.GetelementById("fullname").value
+        var Age = document.GetelementById("ContactForm").elements.NamedItem("Age").value;
+        var Email = document.GetelementById("ContactForm").elements.NamedItem("Email").value;
+
+        documnet.GetElementByUd("output").innerHTML = full_name + age + email;
+      }
+
+    </div>
+
+    <div class="footer">This is my humour and why I shouldn't be allowed to learn HTML</div>
+
+  </div>
+
+</body>
+</html>

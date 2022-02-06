@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Other cool stuff</title>
+<link rel="stylesheet" href="CSS\styles.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="navBar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="info.html">Information</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="other.html">Other cool stuff</a></li>
+      <ul>
+
+    <div class="main">
+      <h1>Other cool stuff</h1>
+      <p>Stuff we're learning to make, have fun.</p>
+
+      </div>
+
+
+      <form action="#" id="ContactForm">
+        <label for="fullname">Name:</label><br>
+        <input type="text" id="fullname" name="fullname"><br>
+
+        <label for="age">Age:</label><br>
+        <input type="text" id="age" name="age"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br><br>
+
+
+      </form>
+
+      <button onclick="Validate()">Submit details</button>
+      <p id="output"></p>
+
+      <script>
+
+      function Validate(){
+        var Full_name = document.getElementById("fullname").value;
+        var Age = document.getElementById("age").value;
+        var Email = document.getElementById("email").value;
+
+        document.getElementById("output").innerHTML = "The following has been submitted: " + Full_name + " " + Age + " " + Email + " ";
+      }
+
+      </script>
+
+      <form action="#" id="TimesTable">
+        <label for="Times">Times:</label><br>
+        <input type="number" id="Times" name="Times"><br>
+
+        <label for="Table">Table:</label><br>
+        <input type="number" id="Table" name="Table"><br>
+      </form>
+
+      <button onclick="myMultiplication()">Generate times table</button>
+      <p id="output"></p>
+
+      <script>
+
+      function myMultiplication(){
+        var Times = document.getElementById("Times").value;
+        var Table = document.getElementById("Table").value;
+        var out=null;
+        if(Table >= 1000){
+          out = '<video width="320" height="240" controls autoplay>  <source src="src/vid/fuckoff.mp4" type="video/mp4">  Your browser does not support the video tag.</video>'
+          //out = '<iframe width="560" height="315" src="https://www.youtube.com/embed/DeTbqLea508?controls=0&amp;start=2" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay=1;></iframe>'
+        }
+        else{
+          for (var i = 0; i < Table; i++){
+          out= out + (i+1) + " * " + Times + " = " + (Times*(i+1)) + " <br> ";
+        }
+        }
+        
+
+        document.getElementById("output").innerHTML = out;
+
+      }
+
+      </script>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
